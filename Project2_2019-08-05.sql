@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Project2
-# Generation Time: 2019-08-05 15:14:46 +0000
+# Generation Time: 2019-08-05 15:29:04 +0000
 # ************************************************************
 
 
@@ -27,11 +27,11 @@ DROP TABLE IF EXISTS `Plants`;
 
 CREATE TABLE `Plants` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `common_name` varchar(255) DEFAULT NULL,
-  `latin_name` varchar(255) DEFAULT NULL,
-  `identification_image` varchar(255) DEFAULT NULL,
-  `canopy_level` enum('CANOPY LAYER','LOW-TREE LAYER','SHRUB LAYER','HERBACIOUS LAYER','GROUNDCOVER LAYER','RHIZOSPHERE LAYER','VERTICAL LAYER') DEFAULT NULL,
-  `life_span` varchar(255) DEFAULT NULL,
+  `common_name` varchar(255) NOT NULL DEFAULT '',
+  `latin_name` varchar(255) NOT NULL DEFAULT '',
+  `identification_image` varchar(255) NOT NULL DEFAULT '',
+  `canopy_level` enum('CANOPY LAYER','LOW-TREE LAYER','SHRUB LAYER','HERBACIOUS LAYER','GROUNDCOVER LAYER','RHIZOSPHERE LAYER','VERTICAL LAYER') NOT NULL DEFAULT 'CANOPY LAYER',
+  `life_span` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `common_name` (`common_name`),
   UNIQUE KEY `latin_name` (`latin_name`),
