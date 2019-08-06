@@ -9,13 +9,17 @@ $db->setAttribute(
     PDO::ATTR_DEFAULT_FETCH_MODE,
     PDO::FETCH_ASSOC);
 
-$sql = $db->prepare('SELECT * FROM `Plants`;');
+function displayAll($database) {
+    $sql = $database->prepare('SELECT * FROM `Plants`;');
 
-$sql->execute();
+    $sql->execute();
 
-$results = $sql->fetchAll();
+    $results = $sql->fetchAll();
 
-var_dump($results);
+    var_dump($results);
+};
+
+displayAll($db);
 
 
 ?>
