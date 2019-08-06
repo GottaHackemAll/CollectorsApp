@@ -8,6 +8,7 @@ getData($db);
 
 $plants = getData($db);
 
+search($plants);
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +20,19 @@ $plants = getData($db);
     <link rel="stylesheet" type="text/css" href="normalize.css">
 </head>
 <body>
+<section>
+    <div class="search" >
+        <form action="index.php" method="get">
+            <input type="text" name="common_name">
+            <input type="submit" value="Search">
+        </form>
+    </div>
 
+<!--    <div class="input">-->
+<!--        <form>-->
+<!--            <input type="text"-->
+<!--        </form>-->
+<!--    </div>-->
+</section>
 </body>
 </html>
