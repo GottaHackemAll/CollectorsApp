@@ -1,22 +1,12 @@
 <?php
 
-$db = new PDO(
-    'mysql:host=192.168.20.20; dbname=Project2',
-    'root',
-    '');
+require_once 'functions.php';
 
-$db->setAttribute(
-    PDO::ATTR_DEFAULT_FETCH_MODE,
-    PDO::FETCH_ASSOC);
+$db = connect();
 
-$sql = $db->prepare('SELECT * FROM `Plants`;');
+getData($db);
 
-$sql->execute();
-
-$results = $sql->fetchAll();
-
-var_dump($results);
-
+$plants = getData($db);
 
 ?>
 
