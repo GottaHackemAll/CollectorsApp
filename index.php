@@ -25,4 +25,7 @@ var_dump($results);
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
 </head>
+<body>
+
+</body>
 </html>
