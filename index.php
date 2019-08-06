@@ -1,33 +1,12 @@
 <?php
 
-$db = new PDO(
-    'mysql:host=192.168.20.20; dbname=Project2',
-    'root',
-    '');
+require_once 'functions.php';
 
-$db->setAttribute(
-    PDO::ATTR_DEFAULT_FETCH_MODE,
-    PDO::FETCH_ASSOC);
+$db = connect();
 
-    $sql = $db->prepare('SELECT * FROM `Plants`;');
+getData($db);
 
-    $sql->execute();
-
-    $plants = $sql->fetchAll();
-
-    function returnPlant($plant) {
-            return $plant['id'] . ' - ' . $plant['common_name'] . ' - ' . $plant['latin_name'] . ' - ' . $plant['identification_image'] . ' - ' . $plant['canopy_level'] . ' - ' . $plant['life_span'];
-
-    }
-
-    function displayAll($plants) {
-        foreach ($plants as $plant) {
-            echo returnPlant($plant);
-            echo '<br>';
-        }
-    }
-
-    displayAll($plants);
+echo processData($plants);
 
 ?>
 
