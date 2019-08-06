@@ -8,8 +8,6 @@ getData($db);
 
 $plants = getData($db);
 
-echo processData($plants);
-
 ?>
 
 <!DOCTYPE html>
