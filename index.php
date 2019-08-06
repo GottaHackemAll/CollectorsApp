@@ -6,6 +6,8 @@ $db = connect();
 
 getData($db);
 
+$plants = getData($db);
+
 echo processData($plants);
 
 ?>
