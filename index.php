@@ -9,18 +9,25 @@ $db->setAttribute(
     PDO::ATTR_DEFAULT_FETCH_MODE,
     PDO::FETCH_ASSOC);
 
-function displayAll($database) {
-    $sql = $database->prepare('SELECT * FROM `Plants`;');
+    $sql = $db->prepare('SELECT * FROM `Plants`;');
 
     $sql->execute();
 
-    $results = $sql->fetchAll();
+    $plants = $sql->fetchAll();
 
-    var_dump($results);
-};
+    function returnPlant($plant) {
+            return $plant['id'] . ' - ' . $plant['common_name'] . ' - ' . $plant['latin_name'] . ' - ' . $plant['identification_image'] . ' - ' . $plant['canopy_level'] . ' - ' . $plant['life_span'];
 
-displayAll($db);
+    }
 
+    function displayAll($plants) {
+        foreach ($plants as $plant) {
+            echo returnPlant($plant);
+            echo '<br>';
+        }
+    }
+
+    displayAll($plants);
 
 ?>
 
