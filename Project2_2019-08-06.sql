@@ -7,7 +7,7 @@
 #
 # Host: 192.168.20.20 (MySQL 5.6.44)
 # Database: Project2
-# Generation Time: 2019-08-06 08:02:43 +0000
+# Generation Time: 2019-08-06 08:17:02 +0000
 # ************************************************************
 
 
@@ -46,10 +46,10 @@ VALUES
 	(1,'American Persimmon','Diospyros virginiana','./images/american-persimmon.jpg','CANOPY LAYER','60'),
 	(2,'Nodding Saltbush','Einadia wutans','./images/nodding-saltbush.jpg','SHRUB LAYER','10'),
 	(3,'Chinese Chestnut','Castanea mollissima','./images/chinese-chestnut.jpg','CANOPY LAYER','150'),
-	(4,'Papaya Tree','Carica papaya','./images/yellow-papaya-tree.png.webp','LOW-TREE LAYER','5'),
-	(5,'Black Locust','Robinia pseudoacacia ','./images/black-locust.jpg.webp','CANOPY LAYER','75'),
+	(4,'Papaya Tree','Carica papaya','./images/papaya-tree.jpg','LOW-TREE LAYER','5'),
+	(5,'Black Locust','Robinia pseudoacacia ','./images/black-locust.jpg','CANOPY LAYER','75'),
 	(6,'Zucchini','Cucurbita pepo ','./images/yellow-zucchini-plant.jpg','VERTICAL LAYER','0.4'),
-	(7,'Chokos','Sechium edule ','./images/chokos.jpg.webp','VERTICAL LAYER','0.4'),
+	(7,'Chokos','Sechium edule ','./images/chokos.jpg','VERTICAL LAYER','0.4'),
 	(8,'Sorrel','Rumex acetosa','./images/sorrel.jpg','HERBACIOUS LAYER','0.3'),
 	(9,'Olive','Olea europaea','./images/olive.jpg','LOW-TREE LAYER','300 - 600'),
 	(10,'Lavender','Lavandula angustifolia','./images/lavender.jpg','SHRUB LAYER','12'),
