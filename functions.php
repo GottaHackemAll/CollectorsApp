@@ -23,35 +23,3 @@ function processData($plants)
     return $plantRow;
 }
 
-function search($db)
-{
-    if (isset($_GET['common_name'])) {
-
-//        $sql = $db->prepare('SELECT `common_name` FROM `Plants` WHERE `common_name` =' . $_GET['common_name'] . ';');
-//        $sql->execute();
-//        $check = $sql->fetch();
-
-
-            $plant = $_GET['common_name'];
-
-            $sql = $db->prepare('SELECT * FROM `Plants` WHERE `common_name`=:cn;');
-
-            $sql->bindParam(
-                ':cn',
-                $plant,
-                PDO::PARAM_INT);
-
-            $sql->execute();
-
-            $result = $sql->fetch();
-
-            return $result;
-
-
-//         else {
-//            echo 'common_name doesn\'t match';
-//        }
-    } else {
-        echo 'what';
-    }
-}
