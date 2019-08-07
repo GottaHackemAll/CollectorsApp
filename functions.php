@@ -3,7 +3,7 @@ require_once 'db.php';
 
 $db = connect();
 
-function getData($db)
+function getData(PDO $db):array
 {
     $sql = $db->prepare('SELECT `id`, `common_name`, `latin_name`,  `canopy_level`, `life_span` FROM `Plants`;');
 
@@ -30,7 +30,7 @@ function processData(array $plants):string {
     return $plantRow;
 }
 
-function getImage($db) {
+function getImage(PDO $db):array {
     $sql = $db->prepare('SELECT `identification_image` FROM `Plants`;');
 
     $sql->execute();
@@ -40,20 +40,20 @@ function getImage($db) {
     return $images;
 }
 
-getID($db);
 
-function displayImage($images) {
+function displayImage(array $images):string {
 
     $plantImage = '';
 
     foreach($images as $image) {
-        $plantImage .= $id . '<img class ="sourceImage" src="' .  $image["identification_image"] . '">';
+        $plantImage .= '<div><img class ="sourceImage" src="' .  $image["identification_image"] . '"></div>';
     }
     return $plantImage;
 }
 
-function getID($db) {
-    $sql = $db->prepare('SELECT `id` FROM `Plants`;');
+
+function getID(PDO $db) {
+    $sql = $db->prepare('SELECT `id` FROM `Plants` GROUP BY `id` ASC;');
 
     $sql->execute();
 
@@ -62,13 +62,13 @@ function getID($db) {
     return $ids;
 }
 
-function displayID($ids) {
-
-    $plantId = '';
-
-    foreach($ids as $id) {
-        $plantId .= '<p>' . $id["id"] . '</p>';
-    }
-    return $plantId;
-}
+//function displayID(array $ids):string {
+//
+//    $plantId = '';
+//
+//    foreach($ids as $id) {
+//        $plantId .= '<p>' . $id["id"] . '</p>';
+//    }
+//    return $plantId;
+//}
 

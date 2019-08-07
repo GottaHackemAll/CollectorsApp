@@ -18,9 +18,12 @@ section {
     float: left;
     height: 100%;
     width: 50%;
-    padding: 5%;
 }
-
+section div.table, section div.images {
+    width: 90%;
+    height: 80%;
+    margin: 10% 5%;
+}
 .table {
     border:solid black;
     height: 100%;
@@ -64,18 +67,27 @@ ul li:last-child {
     height: 100%;
     width: 100%;
 }
-
-.sourceImage {
-    margin: 1%;
-    height: 20%;
+.images div {
+    height: 100px;
+    width: 33.3%;
+    overflow: hidden;
+    float: left;
 }
+.images div img {
+    width: 150%;
+}
+
+    /*.sourceImage {*/
+/*    margin: 1%;*/
+/*    height: 20%;*/
+/*}*/
 
 .wrapper {
     overflow: auto;
 }
 
-p {
-    position: absolute;
-}
+/*p {*/
+/*    position: absolute;*/
+/*}*/
 
 

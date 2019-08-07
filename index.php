@@ -14,7 +14,6 @@ $plantImageArray = displayImage($images);
 
 $ids = getID($db);
 
-$id = displayID($ids);
 
 ?>
 
@@ -45,10 +44,10 @@ $id = displayID($ids);
     </section>
     <section>
         <div class="images">
-            <?php echo '<div>';
-                    echo $id;
+            <?php
+//                    echo $id;
                   echo $plantImageArray;
-                  echo '</div>' ?>
+                    ?>
 
         </div>
     </section>
