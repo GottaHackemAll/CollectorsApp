@@ -14,32 +14,6 @@ function getData($db)
     return $plants;
 }
 
-//function getHeadings($plants) {
-//    $plantHeading = '<tr>';
-//    foreach ($plants[0] as $key => $value) {
-//        $plantHeading .= '<th>' . $key . '</th>';
-//    }
-//    $plantHeading .= '</tr>';
-//    return $plantHeading;
-//}
-
-//function getTableBody($plants) {
-//    $tableBody = '';
-//    foreach ($plants as $plant) {
-//        $tableBody .= '<tr>';
-//        $tableBody .=
-//            '<td>' . $plant['id'] . '</td>' .
-//            '<td>' . $plant['common_name'] . '</td>' .
-//            '<td>' . $plant['latin_name'] . '</td>' .
-//            '<td>' . $plant['identification_image'] . '</td>' .
-//            '<td>' . $plant['canopy_level'] . '</td>' .
-//            '<td>' . $plant['life_span'] . '</td>';
-//            '<td><img src="' . $plant['identification_image'] . '"></td>';
-//        $tableBody .= '</tr>';
-//    }
-//    return $tableBody;
-//}
-
 function processData(array $plants):string {
     $plantRow = '';
     foreach ($plants as $plant) {
@@ -70,7 +44,7 @@ function displayImage($images) {
     $plantImage = '';
 
     foreach($images as $image) {
-        $plantImage .= '<img src="' .  $image["identification_image"] . '">';
+        $plantImage .= '<img class ="sourceImage" src="' .  $image["identification_image"] . '">';
     }
     return $plantImage;
 }
