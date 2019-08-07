@@ -8,7 +8,7 @@ getData($db);
 
 $plants = getData($db);
 
-$plantTable = getHeadings($plants) . getTableBody($plants);
+//$plantTable = getHeadings($plants) . getTableBody($plants);
 
 //echo processData($plants);
 
@@ -26,12 +26,9 @@ $plantTable = getHeadings($plants) . getTableBody($plants);
 </head>
 <body background="images/vine-wall.jpg">
 <section class="container">
-    <div>
-        <table class="table">
-            <?php echo $plantTable ?>
-        </table>
+    <div class="table">
+            <?php echo processData($plants) ?>
     </div>
-    <!--    <div class="images">--><?php //echo $plantImageArray ?><!--</div>-->
 </section>
 </body>
 </html>
