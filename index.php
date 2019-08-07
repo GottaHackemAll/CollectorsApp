@@ -22,17 +22,27 @@ $plantImageArray = displayImage($images);
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
 </head>
-<body background="images/vine-wall.jpg">
-<section class="container">
-    <h1>TABLE</h1>
-    <div class="table">
-            <?php echo processData($plants) ?>
-    </div>
-</section>
-<section>
-    <div class="images">
-        <?php echo $plantImageArray ?>
-    </div>
-</section>
+<body  background="images/vine-wall.jpg">
+<div class="wrapper">
+    <section>
+        <div class="table">
+            <div>
+                <ul class="heading">
+                    <li>ID</li>
+                    <li>Common Name</li>
+                    <li>Latin Name</li>
+                    <li>Canopy Level</li>
+                    <li>Life Span</li>
+                </ul>
+            </div>
+                <?php echo processData($plants) ?>
+        </div>
+    </section>
+    <section>
+        <div class="images">
+            <?php echo $plantImageArray ?>
+        </div>
+    </section>
+</div>
 </body>
 </html>

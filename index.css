@@ -8,44 +8,70 @@ body {
     background-size: cover;
 }
 
-.container {
-    width: 1500px;
-    height: 1000px;
+.wrapper {
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+section {
+    float: left;
+    height: 100%;
+    width: 50%;
+    padding: 5%;
 }
 
 .table {
-    padding-left: -10%;
-    margin-top: 10%;
-    margin-left: 5%;
-    height: 50%;
-    width: 50%;
-    border: solid black;
-    overflow: scroll;
+    border:solid black;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 .row {
     width: 100%;
-    margin-right: -10%;
 }
 
 ul {
+    padding-top: 3%;
+    border-top: solid black;
     width: 100%;
     text-align: center;
     overflow: auto;
 }
 
+.heading {
+}
+
 li {
-    margin-left: 1%;
+    margin-left: 9%;
     height: 10%;
     width: 18%;
     float: left;
 }
 ul li:first-child {
-    margin-left: 3%;
+    margin-left: -3%;
 width: 3%;
 }
 
 ul li:last-child {
-    margin-left: 3%;
     width: 3%;
 }
+
+.images {
+    overflow-y: scroll;
+    float: right;
+    border: solid black;
+    height: 100%;
+    width: 100%;
+}
+
+.sourceImage {
+    margin: 1%;
+    height: 20%;
+}
+
+.wrapper {
+    overflow: auto;
+}
+
+

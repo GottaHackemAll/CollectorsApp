@@ -5,7 +5,7 @@ $db = connect();
 
 function getData($db)
 {
-    $sql = $db->prepare('SELECT `id`, `common_name`, `latin_name`, `identification_image`, `canopy_level`, `life_span` FROM `Plants`;');
+    $sql = $db->prepare('SELECT `id`, `common_name`, `latin_name`,  `canopy_level`, `life_span` FROM `Plants`;');
 
     $sql->execute();
 
@@ -13,6 +13,8 @@ function getData($db)
 
     return $plants;
 }
+
+
 
 function processData(array $plants):string {
     $plantRow = '';
@@ -22,7 +24,6 @@ function processData(array $plants):string {
             $plant['id'] . '</li><li>' .
             $plant['common_name'] . '</li><li>' .
             $plant['latin_name'] . '</li><li>' .
-            $plant['identification_image'] . '</li><li>' .
             $plant['canopy_level'] . '</li><li>' .
             $plant['life_span'] . '</li></ul></div>';
     }
