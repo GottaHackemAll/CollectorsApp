@@ -23,3 +23,26 @@ function processData($plants)
     return $plantRow;
 }
 
+function getImage($db) {
+    $sql = $db->prepare('SELECT `identification_image` FROM `Plants`;');
+
+    $sql->execute();
+
+    $images = $sql->fetchAll();
+
+    return $images;
+}
+
+function displayImage($images)
+{
+
+    $plantImage = '';
+
+    foreach($images as $image) {
+        $plantImage .= '<img src="' .  $image["identification_image"] . '">';
+    }
+    return $plantImage;
+}
+
+
+

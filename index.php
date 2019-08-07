@@ -8,7 +8,10 @@ getData($db);
 
 $plants = getData($db);
 
-search($plants);
+//echo processData($plants);
+
+$images = getImage($db);
+$plantImageArray = displayImage($images);
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +25,7 @@ search($plants);
 <body>
 <section>
 
+    <div class="images"><?php echo $plantImageArray ?></div>
 </section>
 </body>
 </html>
