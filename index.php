@@ -12,6 +12,10 @@ $images = getImage($db);
 
 $plantImageArray = displayImage($images);
 
+$ids = getID($db);
+
+$id = displayID($ids);
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +26,8 @@ $plantImageArray = displayImage($images);
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
 </head>
-<body  background="images/vine-wall.jpg">
+<!--<body  background="images/vine-wall.jpg">-->
+<body>
 <div class="wrapper">
     <section>
         <div class="table">
@@ -40,7 +45,11 @@ $plantImageArray = displayImage($images);
     </section>
     <section>
         <div class="images">
-            <?php echo $plantImageArray ?>
+            <?php echo '<div>';
+                    echo $id;
+                  echo $plantImageArray;
+                  echo '</div>' ?>
+
         </div>
     </section>
 </div>

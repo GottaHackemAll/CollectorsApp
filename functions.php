@@ -40,15 +40,35 @@ function getImage($db) {
     return $images;
 }
 
+getID($db);
+
 function displayImage($images) {
 
     $plantImage = '';
 
     foreach($images as $image) {
-        $plantImage .= '<img class ="sourceImage" src="' .  $image["identification_image"] . '">';
+        $plantImage .= $id . '<img class ="sourceImage" src="' .  $image["identification_image"] . '">';
     }
     return $plantImage;
 }
 
+function getID($db) {
+    $sql = $db->prepare('SELECT `id` FROM `Plants`;');
 
+    $sql->execute();
+
+    $ids = $sql->fetchAll();
+
+    return $ids;
+}
+
+function displayID($ids) {
+
+    $plantId = '';
+
+    foreach($ids as $id) {
+        $plantId .= '<p>' . $id["id"] . '</p>';
+    }
+    return $plantId;
+}
 
