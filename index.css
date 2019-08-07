@@ -4,8 +4,6 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -16,10 +14,18 @@ body {
 }
 
 .table {
+    padding-left: -10%;
+    margin-top: 10%;
+    margin-left: 5%;
     height: 50%;
     width: 50%;
     border: solid black;
     overflow: scroll;
+}
+
+.row {
+    width: 100%;
+    margin-right: -10%;
 }
 
 ul {
@@ -29,12 +35,17 @@ ul {
 }
 
 li {
-    padding-left: 0;
+    margin-left: 1%;
     height: 10%;
     width: 18%;
-    border: solid black;
     float: left;
 }
 ul li:first-child {
+    margin-left: 3%;
 width: 3%;
+}
+
+ul li:last-child {
+    margin-left: 3%;
+    width: 3%;
 }
