@@ -62,7 +62,7 @@ function processData(array $plants): string
 
 function getImage(PDO $db): array
 {
-    $sql = $db->prepare('SELECT `identification_image` FROM `Plants`;');
+    $sql = $db->prepare('SELECT `identification_image` FROM `Plants` GROUP BY `id` ASC;');
 
     $sql->execute();
 
