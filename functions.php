@@ -3,7 +3,7 @@ require_once 'db.php';
 
 $db = connect();
 
-function getData(PDO $db):array
+function getData(PDO $db): array
 {
     $sql = $db->prepare('SELECT `id`, `common_name`, `latin_name`,  `canopy_level`, `life_span` FROM `Plants`;');
 
@@ -14,7 +14,13 @@ function getData(PDO $db):array
     return $plants;
 }
 
-function processData(array $plants):string {
+function processData(array $plants): string
+{
+
+    if (array_keys($plants) !== range(0, count($plants) - 1)) {
+        return false;
+    }
+
     $plantRow = '';
     foreach ($plants as $plant) {
         $plantRow .=
@@ -28,7 +34,9 @@ function processData(array $plants):string {
     return $plantRow;
 }
 
-function getImage(PDO $db):array {
+
+function getImage(PDO $db): array
+{
     $sql = $db->prepare('SELECT `identification_image` FROM `Plants`;');
 
     $sql->execute();
@@ -38,17 +46,22 @@ function getImage(PDO $db):array {
     return $images;
 }
 
-function displayImage(array $images):string {
+function displayImage(array $images): string {
+
+    if (array_keys($images) !== range(0, count($images) - 1))
+    return false;
+
 
     $plantImage = '';
 
-    foreach($images as $image) {
-        $plantImage .= '<div><img class ="sourceImage" src="' .  $image["identification_image"] . '"></div>';
+    foreach ($images as $image) {
+        $plantImage .= '<div><img class ="sourceImage" src="' . $image["identification_image"] . '"></div>';
     }
     return $plantImage;
 }
 
-function getID(PDO $db) {
+function getID(PDO $db)
+{
     $sql = $db->prepare('SELECT `id` FROM `Plants` GROUP BY `id` ASC;');
 
     $sql->execute();
@@ -58,11 +71,14 @@ function getID(PDO $db) {
     return $ids;
 }
 
-function displayID(array $ids):string {
+function displayID(array $ids): string {
+
+    if (array_keys($ids) !== range(0, count($ids) - 1))
+        return false;
 
     $plantId = '';
 
-    foreach($ids as $id) {
+    foreach ($ids as $id) {
         $plantId .= '<p>' . $id["id"] . '</p>';
     }
     return $plantId;
