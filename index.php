@@ -22,8 +22,8 @@ $id = displayID($ids);
 <head>
     <meta charset="utf-8">
     <title>Collectors App</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
 </head>
 <!--<body  background="images/vine-wall.jpg">-->
 <body>
@@ -32,7 +32,7 @@ $id = displayID($ids);
         <div class="table">
             <div>
                 <ul class="heading">
-                    <li>ID</li>
+                    <li>ID</li>pstor,
                     <li>Common Name</li>
                     <li>Latin Name</li>
                     <li>Canopy Level</li>
