@@ -7,10 +7,6 @@ use PHPUnit\Framework\TestCase;
 class FunctionsTest extends TestCase
 {
 
-    /***
-     * processData success test
-     */
-
    public function testProcessData_returnsAString_success() {
 
        $testArray = [
@@ -37,10 +33,6 @@ class FunctionsTest extends TestCase
        $this->assertEquals($expectedResult, $result);
    }
 
-    /***
-     * processData malformed test
-     */
-
     public function testProcessData_MalformedInput() {
 
         $testArray = [
@@ -57,11 +49,7 @@ class FunctionsTest extends TestCase
 
         $this->assertEquals($expectedResult, $result);
     }
-
-    /***
-     * displayID success test
-     */
-
+    
     public function testDisplayID_returnsAString_success() {
 
        $testArray = [['id' => 1], ['id' => 2], ['id' => 3]];
@@ -73,10 +61,6 @@ class FunctionsTest extends TestCase
         $this->assertEquals($expectedResult, $result);
     }
 
-    /***
-     * displayID malformed test
-     */
-
     public function testDisplayID_MalformedInput() {
 
         $testArray =  ['id' => 1, 'common_name' => 'bleh', 'latin_name' => 'Diospyros virginiana'];
@@ -87,10 +71,6 @@ class FunctionsTest extends TestCase
 
         $this->assertEquals($expectedResult, $result);
     }
-
-    /***
-     * displayImage success test
-     */
 
     public function testDisplayImage_returnsAString_success() {
 
@@ -106,8 +86,6 @@ class FunctionsTest extends TestCase
 
         $this->assertEquals($expectedResult, $result);
     }
-
-
 
     public function testDisplayImage_MalformedTest() {
 
