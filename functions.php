@@ -62,13 +62,13 @@ function getID(PDO $db) {
     return $ids;
 }
 
-//function displayID(array $ids):string {
-//
-//    $plantId = '';
-//
-//    foreach($ids as $id) {
-//        $plantId .= '<p>' . $id["id"] . '</p>';
-//    }
-//    return $plantId;
-//}
+function displayID(array $ids):string {
+
+    $plantId = '';
+
+    foreach($ids as $id) {
+        $plantId .= '<p>' . $id["id"] . '</p>';
+    }
+    return $plantId;
+}
 
