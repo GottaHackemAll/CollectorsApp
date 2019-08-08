@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background-image: url("../images/vine-wall.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+section {
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+section div.table, section div.images {
+    width: 90%;
+    height: 80%;
+    margin: 10% 5%;
+}
+
+.table {
+    border:solid black;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.row {
+    width: 100%;
+}
+
+.heading {
+    font-size: 1.2rem;
+}
+
+ul {
+    padding-top: 3%;
+    border-top: solid black;
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+}
+
+li {
+    margin-left: 9%;
+    height: 10%;
+    width: 18%;
+    float: left;
+}
+
+ul li:first-child {
+    margin-left: -3%;
+    width: 3%;
+}
+
+ul li:last-child {
+    width: 3%;
+}
+
+.images {
+    overflow: auto;
+    float: right;
+    border: solid black;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.images p {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.images p:first-child {
+    position: absolute;
+}
+
+.images p:first-child, .images p:nth-child(4), .images p:nth-child(7), .images p:nth-child(10), .images p:nth-child(13) {
+    left: 5%;
+}
+
+.images p:nth-child(2), .images p:nth-child(5), .images p:nth-child(8), .images p:nth-child(11), .images p:nth-child(14) {
+    left: 38.5%;
+}
+
+.images p:nth-child(3), .images p:nth-child(6), .images p:nth-child(9),  .images p:nth-child(12), .images p:nth-child(15){
+    left: 72%;
+}
+
+.images p:nth-child(4), .images p:nth-child(5), .images p:nth-child(6) {
+    top: 19.5%;
+}
+
+.images p:nth-child(7), .images p:nth-child(8), .images p:nth-child(9) {
+    top: 39%;
+}
+
+.images p:nth-child(10), .images p:nth-child(11), .images p:nth-child(12) {
+    top: 58.5%;
+}
+
+.images p:nth-child(13), .images p:nth-child(14), .images p:nth-child(15) {
+    top: 77.5%;
+}
+
+.images div {
+    padding: 0.5%;
+    height: 19.5%;
+    width: 33.3%;
+    overflow: hidden;
+    float: left;
+}
+
+.sourceImage {
+    object-fit: cover;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    overflow: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    section {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 530px) {
+    .head {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    li {
+        font-size: 1rem;
+        margin-left: 8%;
+    }
+
+    ul li:first-child {
+        margin-left: -10%;
+    }
+
+    ul li:last-child {
+        margin-left: 13%;
+    }
+}
