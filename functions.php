@@ -18,12 +18,12 @@ function processData(array $plants):string {
     $plantRow = '';
     foreach ($plants as $plant) {
         $plantRow .=
-            '<div class="row"><ul><li>' .
-            $plant['id'] . '</li><li>' .
-            $plant['common_name'] . '</li><li>' .
-            $plant['latin_name'] . '</li><li>' .
-            $plant['canopy_level'] . '</li><li>' .
-            $plant['life_span'] . '</li></ul></div>';
+            '<div class="row"><ul><li>'
+            . $plant['id'] . '</li><li>'
+            . $plant['common_name'] . '</li><li>'
+            . $plant['latin_name'] . '</li><li>'
+            . $plant['canopy_level'] . '</li><li>'
+            . $plant['life_span'] . '</li></ul></div>';
     }
     return $plantRow;
 }
