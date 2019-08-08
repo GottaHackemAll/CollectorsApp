@@ -65,7 +65,7 @@ ul li:last-child {
 }
 
 .images {
-    overflow-y: scroll;
+    overflow: auto;
     float: right;
     border: solid black;
     height: 100%;
@@ -112,7 +112,7 @@ ul li:last-child {
 
 
 .images div {
-    padding: 1%;
+    padding: 0.5%;
     height: 19.5%;
     width: 33.3%;
     overflow: hidden;
@@ -120,9 +120,41 @@ ul li:last-child {
 }
 
 .images div img {
-    width: 150%;
+    object-fit: contain;
+    /*width: 100%;*/
 }
 
 .wrapper {
     overflow: auto;
+}
+
+@media only screen and (max-width: 1100px) {
+    .images div img {
+        /*height: 150%;*/
+        /*width: 150%;*/
+    }
+
+    li {
+        margin-left: 7%;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .images div img {
+        /*height: 150%;*/
+    }
+
+    section {
+        height: 100%;
+        width: 100%;
+    }
+
+    .images div img {
+
+        /*height: 100%;*/
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
 }
