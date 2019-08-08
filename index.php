@@ -13,7 +13,7 @@ $images = getImage($db);
 $plantImageArray = displayImage($images);
 
 $ids = getID($db);
-
+$id = displayID($ids);
 
 ?>
 
@@ -45,7 +45,7 @@ $ids = getID($db);
     <section>
         <div class="images">
             <?php
-//                    echo $id;
+                    echo $id;
                   echo $plantImageArray;
                     ?>
 
