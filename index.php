@@ -29,7 +29,7 @@ $id = displayID($ids);
 <div class="wrapper">
     <section>
         <div class="table">
-            <div>
+            <div class="head">
                 <ul class="heading">
                     <li>ID</li>
                     <li>Common Name</li>
@@ -37,19 +37,19 @@ $id = displayID($ids);
                     <li>Canopy Level</li>
                     <li>Life Span</li>
                 </ul>
-            </div>
-                <?php echo processData($plants) ?>
         </div>
-    </section>
-    <section>
-        <div class="images">
-            <?php
-                    echo $id;
-                  echo $plantImageArray;
-                    ?>
+        <?php echo processData($plants) ?>
+</div>
+</section>
+<section>
+    <div class="images">
+        <?php
+        echo $id;
+        echo $plantImageArray;
+        ?>
 
-        </div>
-    </section>
+    </div>
+</section>
 </div>
 </body>
 </html>
