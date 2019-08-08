@@ -14,8 +14,6 @@ function getData(PDO $db):array
     return $plants;
 }
 
-
-
 function processData(array $plants):string {
     $plantRow = '';
     foreach ($plants as $plant) {
@@ -40,7 +38,6 @@ function getImage(PDO $db):array {
     return $images;
 }
 
-
 function displayImage(array $images):string {
 
     $plantImage = '';
@@ -50,7 +47,6 @@ function displayImage(array $images):string {
     }
     return $plantImage;
 }
-
 
 function getID(PDO $db) {
     $sql = $db->prepare('SELECT `id` FROM `Plants` GROUP BY `id` ASC;');
