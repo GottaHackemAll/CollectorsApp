@@ -29,4 +29,14 @@ class FunctionTest extends TestCase
         $this->assertEquals($expectedResult, $result);
     }
 
+    public function testDisplayImage_returnsAString_success() {
+
+        $testArray = [['identification_image' => './images/american-persimmon.jpg'], ['identification_image' => './images/nodding-saltbush.jpg'], ['identification_image' => './images/chinese-chestnut.jpg']];
+
+        $expectedResult = '<div><img class ="sourceImage" src="./images/american-persimmon.jpg"></div><div><img class ="sourceImage" src="./images/nodding-saltbush.jpg"></div><div><img class ="sourceImage" src="./images/chinese-chestnut.jpg"></div>';
+
+        $result = displayImage($testArray);
+
+        $this->assertEquals($expectedResult, $result);
+    }
 }
