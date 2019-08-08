@@ -140,3 +140,18 @@ img {
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 530px) {
+    li {
+        font-size: 1rem;
+        margin-left: 8%;
+    }
+
+    ul li:first-child {
+        margin-left: -10%;
+    }
+
+    ul li:last-child {
+        margin-left: 15%;
+    }
+}
