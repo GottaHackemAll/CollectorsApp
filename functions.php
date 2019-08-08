@@ -3,6 +3,14 @@ require_once 'db.php';
 
 $db = connect();
 
+/***
+ *
+ * function connects to database
+ *
+ * @param PDO $db
+ * @return array
+ */
+
 function getData(PDO $db): array
 {
     $sql = $db->prepare('SELECT `id`, `common_name`, `latin_name`,  `canopy_level`, `life_span` FROM `Plants`;');
@@ -13,6 +21,16 @@ function getData(PDO $db): array
 
     return $plants;
 }
+
+/***
+ *
+ * function checks if the data retrieved from db is
+ * an indexed array and arranges it in to a list
+ * within a div that can be displayed
+ *
+ * @param array $plants
+ * @return string
+ */
 
 function processData(array $plants): string
 {
@@ -34,6 +52,13 @@ function processData(array $plants): string
     return $plantRow;
 }
 
+/***
+ *
+ * function retrieves an array of images from the db
+ *
+ * @param PDO $db
+ * @return array
+ */
 
 function getImage(PDO $db): array
 {
@@ -45,6 +70,16 @@ function getImage(PDO $db): array
 
     return $images;
 }
+
+/***
+ *
+ * function checks if data retrieved from the db is
+ * an indexed array and wraps it in a div that can
+ * be displayed
+ *
+ * @param array $images
+ * @return string
+ */
 
 function displayImage(array $images): string {
 
@@ -60,6 +95,14 @@ function displayImage(array $images): string {
     return $plantImage;
 }
 
+/***
+ *
+ * function retrieves an array if id's from the database
+ *
+ * @param PDO $db
+ * @return array
+ */
+
 function getID(PDO $db)
 {
     $sql = $db->prepare('SELECT `id` FROM `Plants` GROUP BY `id` ASC;');
@@ -70,6 +113,15 @@ function getID(PDO $db)
 
     return $ids;
 }
+
+/***
+ *
+ * function checks if data retrieved from db is
+ * an indexed array and wraps it so that it can be displayed
+ *
+ * @param array $ids
+ * @return string
+ */
 
 function displayID(array $ids): string {
 
