@@ -25,6 +25,7 @@ section div.table, section div.images {
     height: 80%;
     margin: 10% 5%;
 }
+
 .table {
     border:solid black;
     height: 100%;
@@ -53,9 +54,10 @@ li {
     width: 18%;
     float: left;
 }
+
 ul li:first-child {
     margin-left: -3%;
-width: 3%;
+    width: 3%;
 }
 
 ul li:last-child {
@@ -79,7 +81,6 @@ ul li:last-child {
 .images p:first-child {
     position: absolute;
 }
-
 
 .images p:first-child, .images p:nth-child(4), .images p:nth-child(7), .images p:nth-child(10), .images p:nth-child(13) {
     left: 5%;
@@ -125,6 +126,3 @@ ul li:last-child {
 .wrapper {
     overflow: auto;
 }
-
-
-
