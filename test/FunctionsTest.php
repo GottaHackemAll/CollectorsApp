@@ -49,7 +49,7 @@ class FunctionsTest extends TestCase
 
         $this->assertEquals($expectedResult, $result);
     }
-    
+
     public function testDisplayID_returnsAString_success() {
 
        $testArray = [['id' => 1], ['id' => 2], ['id' => 3]];
