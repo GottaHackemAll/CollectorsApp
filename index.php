@@ -25,14 +25,13 @@ $id = displayID($ids);
     <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
 </head>
-<!--<body  background="images/vine-wall.jpg">-->
 <body>
 <div class="wrapper">
     <section>
         <div class="table">
             <div>
                 <ul class="heading">
-                    <li>ID</li>pstor,
+                    <li>ID</li>
                     <li>Common Name</li>
                     <li>Latin Name</li>
                     <li>Canopy Level</li>

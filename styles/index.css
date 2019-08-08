@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url("images/vine-wall.jpg");
+    background-image: url("../images/vine-wall.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -36,9 +36,7 @@ section div.table, section div.images {
 }
 
 .heading {
-    border-left: solid black;
-    border-right: solid black;
-    background: white;
+    font-size: 1.2rem;
 }
 
 ul {
